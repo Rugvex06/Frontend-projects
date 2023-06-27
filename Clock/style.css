@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #183e4b;
+}
+.container{
+    position: absolute;
+    min-width: 500px;
+    display: grid;
+
+}
+
+.head{
+    align-items: center;
+    justify-content: center;
+    padding-left: 110px;
+    padding-bottom: 25px;
+    font-size: xx-large;
+    font-weight: 800;
+    color:#d74a49;
+
+}
+
+
+.clock {
+
+  width: 450px;
+  height: 450px;
+  background: #eaeaea;
+  box-shadow: 14px 4px 25px 6px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 10px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px ;
+}
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #fff1dc;
+  border: 3px solid #c3afa2;
+  border-radius: 50%;
+  z-index: 1000000;
+}
+.clock span {
+  position: absolute;
+  width: 20px;
+  height: 400px;
+  color: #969f9f;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock span b {
+ font-size: x-large;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle {
+  position: absolute;
+  border: 2px solid #00000018;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.circle i
+{ 
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background :var(--clr);
+    transform: scaleY(0.5);
+    opacity: 0.75;
+    z-index: 9;
+    transform-origin: bottom;
+    
+}
+
+.circle:nth-child(1) i{
+    width: 2px;
+    
+}
+
+.circle:nth-child(2) i{
+    width: 6px;
+  
+}
+.circle2 {
+    position: absolute;
+    border: 2px solid #00000018;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    z-index: 9;
+
+  }
+  
+.circle3 {
+    position: absolute;
+    border: 2px solid #00000018;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    z-index: 8;
+
+  }
+  
+  .circle::before{
+    content: "";
+    position: absolute;
+    top: -8.5px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 40px var(--clr), 0 0 60px var(--clr);
+  }
+
